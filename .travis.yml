@@ -1,0 +1,21 @@
+language: python
+branches:
+  only:
+  - master
+  
+python:
+  - "3.6"
+   
+install:
+- pip3 install pelican git nodejs npm markdown
+- npm install --global surge
+
+script:
+- pelican-quickstart
+- pelican IC-WEB/index.md -s pelicanconf.py 
+
+deploy:
+  provider: surge
+  project: ./output/
+  domain: adriansilva.surge.sh
+skip_cleanup: true
