@@ -9,13 +9,9 @@ python:
 install:
 - pip3 install pelican 
 - pip3 install markdown
-- pip3 install unzip
-- pip3 install wget
 
 script:
-- wget https://github.com/onlyhavecans/pelican-chunk/archive/f9206df831d497688516cf86dd089004be1ee06a.zip
-- unzip f9206df831d497688516cf86dd089004be1ee06a.zip  
-- pelican IC-WEB/ -s .pelicanconf.py -t pelican-chunk-f9206df831d497688516cf86dd089004be1ee06a/
+- pelican IC-WEB/ -s .pelicanconf.py
 deploy:
   provider: surge
   project: ./output/
