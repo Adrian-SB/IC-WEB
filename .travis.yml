@@ -8,7 +8,6 @@ python:
    
 install:
 - pip3 install pelican 
-- pip3 git
 - pip3 nodejs 
 - pip3 npm 
 - pip3 markdown
