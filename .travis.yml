@@ -16,12 +16,10 @@ script:
 - git commit -m "Despliegue web"
 - git config user.name "Adrian-SB"
 - git config user.email "asboceta@gmail.com"
-- git push origin master
+- git push
 
 deploy:
-  provider: pages
+  provider: master
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  
   keep-history: true
-  on:
-    branch: master
