@@ -11,8 +11,8 @@ install:
 - pip3 install markdown
 
 script:
-- pelican-quickstart -p . -t Poemas -a Adrian -l es
-- pelican IC-WEB/ -s pelicanconf.py 
+- git clone https://github.com/Adrian-SB/Web-estatica-elultimorecurso
+- pelican IC-WEB/ -s Web-estatica-elultimorecurso/pelicanconf.py 
 
 deploy:
   provider: surge
