@@ -7,10 +7,11 @@ python:
   - "3.6"
    
 install:
-- pip3 install pelican 
+- pip3 install pelican
+- pip3 install markdown
 
 script:
-- pelican-quickstart
+pelican-quickstart -p . -t Poemas -a Adrian -l es
 - pelican IC-WEB/index.md -s pelicanconf.py 
 
 deploy:
