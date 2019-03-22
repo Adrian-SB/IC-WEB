@@ -12,7 +12,7 @@ install:
 
 script:
 pelican-quickstart -p . -t Poemas -a Adrian -l es
-- pelican IC-WEB/index.md -s pelicanconf.py 
+- pelican IC-WEB/ -s pelicanconf.py 
 
 deploy:
   provider: surge
