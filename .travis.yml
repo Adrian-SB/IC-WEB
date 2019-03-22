@@ -18,12 +18,6 @@ script:
 - git config user.email "asboceta@gmail.com"
 - git push origin master
 deploy:
- provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_API_KEY 
-  keep-history: true
-  on:
-    branch: master
   provider: surge
   project: ./output/
   domain: adriansilva.surge.sh
