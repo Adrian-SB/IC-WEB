@@ -7,13 +7,14 @@ python:
   - "3.6"
    
 install:
-- pip3 install pelican
+- pip3 install pelican 
 - pip3 install markdown
+- pip3 unzip
 
 script:
-- git clone --depth=50 --branch=master https://github.com/Adrian-SB/Web-estatica-elultimorecurso
-- pelican IC-WEB/ -s Web-estatica-elultimorecurso/pelicanconf.py 
-
+- wget https://github.com/onlyhavecans/pelican-chunk/archive/f9206df831d497688516cf86dd089004be1ee06a.zip
+- unzip f9206df831d497688516cf86dd089004be1ee06a.zip  
+- pelican IC-WEB/ -s .pelicanconf.py -t pelican-chunk-f9206df831d497688516cf86dd089004be1ee06a/
 deploy:
   provider: surge
   project: ./output/
