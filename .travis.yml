@@ -11,7 +11,7 @@ install:
 - pip3 install markdown
 
 script:
-- git clone https://github.com/Adrian-SB/Web-estatica-elultimorecurso
+- git clone --depth=50 --branch=master https://github.com/Adrian-SB/Web-estatica-elultimorecurso
 - pelican IC-WEB/ -s Web-estatica-elultimorecurso/pelicanconf.py 
 
 deploy:
