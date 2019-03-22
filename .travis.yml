@@ -17,6 +17,14 @@ script:
 - git config user.name "Adrian-SB"
 - git config user.email "asboceta@gmail.com"
 - git push origin master
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  
+  keep-history: true
+  on:
+    branch: master
 deploy:
   provider: surge
   project: ./output/
