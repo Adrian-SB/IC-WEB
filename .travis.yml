@@ -8,7 +8,6 @@ python:
    
 install:
 - pip3 install pelican 
-- pip3 markdown
 
 script:
 - pelican-quickstart
