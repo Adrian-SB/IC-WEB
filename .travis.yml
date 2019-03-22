@@ -25,8 +25,3 @@ deploy:
   keep-history: true
   on:
     branch: master
-deploy:
-  provider: surge
-  project: ./output/
-  domain: adriansilva.surge.sh
-skip_cleanup: true
