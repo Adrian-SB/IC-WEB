@@ -11,7 +11,7 @@ install:
 - pip3 install markdown
 
 script:
-- pelican IC-WEB/content/ -s pelicanconf.py
+- pelican content/ -s pelicanconf.py
 deploy:
   provider: surge
   project: ./output/
