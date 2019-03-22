@@ -9,7 +9,6 @@ python:
 install:
 - pip3 install pelican 
 - pip3 install markdown
-- pip3 unzip
 
 script:
 - wget https://github.com/onlyhavecans/pelican-chunk/archive/f9206df831d497688516cf86dd089004be1ee06a.zip
