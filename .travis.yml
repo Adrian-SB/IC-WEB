@@ -16,7 +16,7 @@ script:
 - git commit -m "Despliegue web"
 - git config user.name "Adrian-SB"
 - git config user.email "asboceta@gmail.com"
-- git push
+- git push origin master
 
 deploy:
   provider: master
