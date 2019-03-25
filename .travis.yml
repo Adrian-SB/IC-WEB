@@ -14,12 +14,13 @@ script:
 - pelican content/ -s pelicanconf.py
 - git add output/*
 - git commit -m "Despliegue web"
-- git config user.name "Adrian-SB"
-- git config user.email "asboceta@gmail.com"
-- git push origin $GITHUB_TOKEN
 
 deploy:
   provider: surge
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
   project: ./output/
   domain: adriansilva.surge.sh
-skip_cleanup: true
+  on:
+    branch: master
