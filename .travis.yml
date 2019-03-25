@@ -14,6 +14,7 @@ script:
 - pelican content/ -s pelicanconf.py
 - git add output/*
 - git commit -m "Despliegue web"
+- git push origin master
 
 deploy:
   provider: surge
